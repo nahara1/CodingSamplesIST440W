@@ -15,12 +15,13 @@ import requests
 # Set the request parameters
 
 url = 'https://emplkasperpsu2.service-now.com/api/now/table/x_snc_brewing440_recipe?'
+
 """
 To specify a number of records to be returned, add sysparm_limit=
 
 Eg. if you want to return 100 records, set url to: 
 
-url = 'https://emplkasperpsu2.service-now.com/api/now/table/x_snc_brewing440_recipe?'
+url = 'https://emplkasperpsu2.service-now.com/api/now/table/x_snc_brewing440_recipe?sysparm_limit=100'
 
 """
 
@@ -32,7 +33,7 @@ pwd = 'IST440'
 headers = {"Content-Type":"application/json","Accept":"application/json"}
 
 # Do the HTTP request - POST is the HTTP request to create a record
-response = requests.post(url, auth=(user, pwd), headers=headers, data="{\"recipe_name\":\"BeerAle\"}")
+response = requests.post(url, auth=(user, pwd), headers=headers, data="{\"recipe_name\":\"Beer 3\"}")
 
 # Check for HTTP codes other than 200
 if response.status_code != 200:

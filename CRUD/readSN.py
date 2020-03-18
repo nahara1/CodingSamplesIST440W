@@ -23,7 +23,7 @@ pwd = 'IST440'
 headers = {"Content-Type":"application/json","Accept":"application/json"}
 
 # Do the HTTP request - GET is the HTTP request to read records
-response = requests.get(url, auth=(user, pwd), headers=headers )
+response = requests.get(url, auth=(user, pwd), headers=headers)
 
 # Check for HTTP codes other than 200
 if response.status_code != 200:

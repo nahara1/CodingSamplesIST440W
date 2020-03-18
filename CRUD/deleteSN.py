@@ -14,6 +14,7 @@ import requests
 
 # Set the request parameters
 # The long string at the end (after recipe/) is the SYS_ID of the record you want to delete
+
 url = 'https://emplkasperpsu2.service-now.com/api/now/table/x_snc_brewing440_recipe/a6313ebedbd3c010b42f51735e961902'
 
 # User name="IST440", Password="IST440" for this code sample.
