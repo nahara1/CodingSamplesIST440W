@@ -60,6 +60,7 @@ for doc in recipe_names_pairs:
         # insert into db collection
         # print("Inserting ",  doc, " into db...")
         message = "Inserting ",  doc, " into db..."
+        print(message)
         db.collection_recipe.insert_one(doc)
     except pymongo.errors.DuplicateKeyError:
         # skip document because it already exists in the local db collection
