@@ -43,7 +43,7 @@ print("This is a json dictionary: ", data, "Type: ", type(data))
 # No we need to get the list of key value pairs from our dict
 print()
 recipe_names_pairs = data['result']
-print(recipe_names_pairs)
+print("This is a list: ", recipe_names_pairs)
 print()
 
 # Check type
