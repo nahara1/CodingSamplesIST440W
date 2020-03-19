@@ -13,7 +13,8 @@
 import requests
 
 # Set the request parameters
-url = 'https://emplkasperpsu2.service-now.com/api/now/table/x_snc_brewing440_recipe?sys_param=1'
+# if sys_param=1, it returns only one record 
+url = 'https://emplkasperpsu2.service-now.com/api/now/table/x_snc_brewing440_recipe?sys_param=100'
 
 # User name="IST440", Password="IST440" for this code sample.
 user = 'IST440'
