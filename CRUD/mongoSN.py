@@ -35,7 +35,7 @@ response = requests.get(url, auth=(user, pwd), headers=headers )
 
 # Decode the JSON response into a dictionary and use the data
 data = response.json()
-print(data)
+print("json dictonary: ", data)
 
 recipe_names_pairs = data['result']
 
