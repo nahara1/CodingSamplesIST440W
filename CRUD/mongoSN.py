@@ -35,17 +35,25 @@ response = requests.get(url, auth=(user, pwd), headers=headers )
 
 # Decode the JSON response into a dictionary and use the data
 data = response.json()
-print(data)
+print(type(data))
+print()
+print("This is a json dictionary: ", data, "Type: ", type(data))
 
+
+# No we need to get the list of key value pairs from our dict
+print()
 recipe_names_pairs = data['result']
+print(recipe_names_pairs)
+print()
 
-
-
-#
 # Check type
-print("Type recipe_names_pairs: " , type(recipe_names_pairs))
+print("Recipe_names_pairs is of the list type and can now be used to create documents in mongddb: " , type(recipe_names_pairs))
 print()
 #db.collection_recipe.insert(recipe_names_pairs)
+
+
+# For loop to iterate through the key value pairs obtained from the json response
+# and check if any has previously been inserted in the collection
 
 for doc in recipe_names_pairs:
     try:
